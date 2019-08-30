@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<form action=" {{ url_for('criar_usuario') }} " method="POST">
+<fieldset>
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="text" id="id" name="id" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="senha">Senha</label>
+    <input type="password" id="senha" name="senha" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="grupo">Grupo</label>
+    <select id="grupo" name="grupo" class="form-control">
+      <option value="admin">ADMIN</option>
+      <option value="user">USER</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+</fieldset>
+</form>
+<div>
+<h6><a href=" {{ url_for('home') }} ">Home</a></h6>
+<h6><a href=" {{ url_for('listar_usuario') }} ">Listar Usuarios</a></h6>
+</div>
+{% endblock %}

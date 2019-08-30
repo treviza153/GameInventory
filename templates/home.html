@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<div>
+    <h3> O que deseja fazer? </h3>
+    <h4><a href=" {{ url_for('listar_jogo') }} ">Listar jogos</a></h4>
+    <h4><a href=" {{ url_for('cadastrar_jogo') }} ">Cadastrar jogos</a></h4>
+    {% if grupo == 'admin' %}
+    <h4><a href=" {{ url_for('listar_usuario') }} ">Listar Usuarios</a></h4>
+    <h4><a href=" {{ url_for('cadastrar_usuario') }} ">Cadastrar Usuarios</a></h4>
+    {% endif %}
+</div>
+{% endblock %}

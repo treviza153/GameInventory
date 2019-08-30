@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<table class="table table-striped table-responsive table-bordered">
+    <thead class="thead-default">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Grupo</th>
+            <th>Deletar</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for usuario in usuarios %}
+    <tr>
+        <td> {{ usuario.id }} </td>
+        <td> {{ usuario.nome }} </td>
+        <td> {{ usuario.grupo }} </td>
+        <td> <a href=" {{ url_for('deletar_usuario', id = usuario.id) }} ">X</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div>
+    <h6><a href=" {{ url_for('home') }} ">Home</a></h6>
+    <h6><a href=" {{ url_for('cadastrar_usuario') }} ">Cadastrar Usuarios</a></h6>
+</div>
+{% endblock %}
