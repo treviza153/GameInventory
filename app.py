@@ -9,8 +9,8 @@ app.secret_key = 'flask'
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Paty!@#$1234'
-app.config['MYSQL_DB'] = 'jogoteca'
+app.config['MYSQL_PASSWORD'] = 'paswd_example'
+app.config['MYSQL_DB'] = 'gameshop'
 app.config['MYSQL_PORT'] = 3306
 
 db = MySQL(app)
